@@ -549,54 +549,45 @@ footer {
   color: var(--text-muted);
 }
 
-/* ==========================================================================
-   RESPONSIVE FIXES FOR MOBILE & IPAD (HP & TABLET)
-   ========================================================================== */
-
+/* RESPONSIVE LAYOUT UNTUK MOBILE / HANDPHONE */
 @media (max-width: 768px) {
-  .header-container {
-    flex-direction: column;
-    gap: 10px;
-    padding: 10px 15px;
-  }
-  
-  nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
+  /* Merapikan container utama agar tidak terlalu rapat ke pinggir HP */
+  .main-container {
+    padding: 15px !important;
   }
 
-  .nav-link {
-    font-size: 12px;
-    padding: 4px 10px;
+  /* Mengubah susunan tombol cart & checkout agar rapi secara vertikal di HP */
+  .cart-actions-top {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
   }
 
-  .grid-cards {
-    grid-template-columns: 1fr !important;
-    gap: 15px;
+  .cart-actions-top .tombol,
+  .cart-summary-box .tombol,
+  .tombol {
+    width: 100% !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
   }
 
+  /* Memastikan teks ringkasan pembayaran dan struk rata kiri-kanan secara alami */
+  .cart-summary-box div {
+    flex-direction: row !important;
+    justify-content: space-between !important;
+  }
+
+  /* Merapikan tata letak grid halaman sukses agar bertumpuk rapi di HP */
   .success-grid {
     grid-template-columns: 1fr !important;
-    gap: 20px;
+    gap: 20px !important;
   }
 
+  /* Menyesuaikan ukuran font dan padding judul di layar HP */
   .judul-section {
-    font-size: 24px !important;
+    font-size: 22px !important;
+    text-align: center !important;
   }
-
-  .banner-cook-together, .partner-banner-bg {
-    padding: 30px 15px !important;
-    min-height: 280px !important;
-  }
-}
-
-/* Styling Halaman Sukses (Terpisah) */
-.success-grid {
-  display: grid !important;
-  grid-template-columns: 1fr 1fr !important;
-  gap: 30px !important;
-  align-items: start !important;
 }
 
 .receipt-box {
