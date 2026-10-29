@@ -1,47 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gusteau’s Atelier — Order Success &amp; Tracker</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gusteau’s Atelier — Order Success</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <main class="main-container" style="padding-top: 30px;">
-    <div style="text-align: center; margin-bottom: 25px;">
-      <h2 style="color: var(--secondary-olive); font-style: italic;">✓ Order Successfully Placed!</h2>
-      <p style="color: var(--text-muted); font-size: 14px;">Your receipt and live shipping progress tracker are shown below.</p>
+  <div class="promo-bar">Order Successful — Thank you for shopping with Gusteau’s Atelier!</div>
+
+  <header>
+    <div class="header-container">
+      <h1 class="logo" onclick="window.location.href='index.html'">Gusteau’s Atelier</h1>
+      <nav>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="shop.html" class="nav-link">Shop Catalog</a>
+        <a href="news.html" class="nav-link">News &amp; Articles</a>
+        <a href="distributor.html" class="nav-link">Distributors</a>
+        <a href="about.html" class="nav-link">Our Story</a>
+      </nav>
+      <div><a class="tombol tombol-cart" href="cart.html">🛒 Cart (<span id="cart-count">0</span>)</a></div>
+    </div>
+  </header>
+
+  <main class="main-container">
+    <div style="text-align: center; margin-bottom: 30px;">
+      <h2 class="judul-section" style="margin-bottom: 8px;">✓ Order Successfully Placed!</h2>
+      <p style="color: var(--text-muted); font-size: 15px;">Your digital receipt and live shipping progress tracker are shown below.</p>
     </div>
 
     <div class="success-grid">
-      <!-- Struk Belanja Receipt Style -->
+      <!-- KOTAK STRUK PEMBAYARAN -->
       <div class="receipt-box">
         <div class="receipt-header">
           <h3>Gusteau’s Atelier</h3>
-          <p style="font-size: 12px; color: #666;">Parisian Kitchenware Boutique</p>
-          <p style="font-size: 11px; margin-top: 5px;">Dispatched from: Bandung Hub</p>
+          <p style="font-size: 12px; color: var(--text-muted);">Parisian Kitchenware Boutique</p>
+          <small style="color: var(--text-muted);">Dispatched from: Bandung Hub</small>
         </div>
 
-        <div class="receipt-items" id="receipt-items-list">
-          <!-- Item diisi JS -->
+        <div id="receipt-items-list" class="receipt-items">
+          <!-- Item order akan dirender otomatis dari localStorage oleh main.js -->
         </div>
 
-        <div class="receipt-row" style="font-size: 12px; color: var(--text-muted);">
+        <div class="receipt-row">
           <span>Voucher Used:</span>
-          <span id="receipt-voucher-used" style="font-weight: bold;">-</span>
+          <span id="receipt-voucher-used" style="font-weight: bold; color: var(--accent-burgundy);">-</span>
         </div>
 
         <div class="receipt-total">
           <span>TOTAL PAID:</span>
-          <span id="receipt-grand-total" style="color: var(--accent-rust);">Rp0</span>
+          <span id="receipt-grand-total">Rp0</span>
         </div>
       </div>
 
-      <!-- Shipping Progress Tracker -->
+      <!-- TRACKER PENGIRIMAN LIVE -->
       <div class="tracker-box">
-        <h3 style="color: var(--accent-rust); margin-bottom: 5px; font-style: italic;">Live Shipping Tracker</h3>
-        <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 10px;">Destination Region: <strong id="tracker-region-text" style="color: var(--text-dark);">Bandung</strong></p>
-        <p id="tracker-estimate-text" style="font-size: 13px; font-weight: bold; color: var(--secondary-olive); margin-bottom: 15px;"></p>
+        <h3 style="color: var(--accent-burgundy); font-style: italic; margin-bottom: 12px; font-size: 22px;">Live Shipping Tracker</h3>
+        <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 4px;">Destination Region: <strong id="tracker-region-text" style="color: var(--text-dark);">Outer Islands</strong></p>
+        <p id="tracker-estimate-text" style="font-size: 13px; font-weight: bold; color: var(--olive-green); margin-bottom: 20px;">Estimated Delivery: 3-5 Days</p>
 
         <div class="tracker-steps">
           <div class="step-item active">
@@ -51,6 +68,7 @@
               <p>Payment verified and package packed at Bandung Hub.</p>
             </div>
           </div>
+
           <div class="step-item active">
             <div class="step-icon">2</div>
             <div class="step-content">
@@ -58,6 +76,7 @@
               <p>Package handed over to courier partner.</p>
             </div>
           </div>
+
           <div class="step-item">
             <div class="step-icon">3</div>
             <div class="step-content">
@@ -65,6 +84,7 @@
               <p>On the way to your destination region.</p>
             </div>
           </div>
+
           <div class="step-item">
             <div class="step-icon">4</div>
             <div class="step-content">
@@ -76,10 +96,13 @@
       </div>
     </div>
 
-    <div style="text-align: center; margin-top: 35px;">
-      <a class="tombol" href="index.html">Return to Home</a>
+    <!-- TOMBOL KEMBALI KE HOMEPAGE -->
+    <div style="text-align: center; margin-top: 40px; margin-bottom: 20px;">
+      <a href="index.html" class="tombol" style="padding: 14px 35px; font-size: 15px;">Return to Homepage</a>
     </div>
   </main>
+
+  <footer><p>&copy; 2026 Gusteau’s Atelier. Inspired by Ratatouille.</p></footer>
   <script src="js/main.js"></script>
 </body>
 </html>
