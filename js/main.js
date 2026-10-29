@@ -98,7 +98,9 @@ function updateCartDisplay() {
   if (summaryBox) {
     summaryBox.style.display = 'block';
     const totalPriceEl = document.getElementById('cart-grand-total');
-    if (totalPriceEl) totalPriceEl.textContent = 'Rp' + grandTotal.toLocaleString('id-ID');
+    if (totalPriceEl) {
+      totalPriceEl.textContent = 'Rp' + grandTotal.toLocaleString('id-ID');
+    }
   }
 }
 
