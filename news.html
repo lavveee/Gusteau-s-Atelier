@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gusteau’s Atelier — Culinary News &amp; Articles</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="promo-bar">Explore Parisian kitchen culture and exclusive movie trivia!</div>
+
+  <header>
+    <div class="header-container">
+      <h1 class="logo" onclick="window.location.href='index.html'">Gusteau’s Atelier</h1>
+      <nav>
+        <a href="index.html" class="nav-link">Home</a>
+        
+        <div class="dropdown">
+          <a href="shop.html" class="nav-link">Shop Catalog ▾</a>
+          <div class="dropdown-content">
+            <a href="shop.html#preparation">Preparation Tools</a>
+            <a href="shop.html#baking">Baking &amp; Pastry</a>
+            <a href="shop.html#dining">Dining &amp; Cookware</a>
+          </div>
+        </div>
+
+        <a href="news.html" class="nav-link active">News &amp; Articles</a>
+        
+        <div class="dropdown">
+          <a href="distributor.html" class="nav-link">Distributors ▾</a>
+          <div class="dropdown-content">
+            <a href="distributor.html#hubs">Regional Hubs</a>
+            <a href="distributor.html#partner-form">Application Form</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <a href="about.html" class="nav-link">Our Story ▾</a>
+          <div class="dropdown-content">
+            <a href="about.html#story">About Us</a>
+            <a href="about.html#contact">Contact Us</a>
+          </div>
+        </div>
+      </nav>
+      <div><a class="tombol tombol-cart" href="cart.html">🛒 Cart (<span id="cart-count">0</span>)</a></div>
+    </div>
+  </header>
+
+  <main class="main-container">
+    <h2 class="judul-section">Parisian Culinary News &amp; Ratatouille Archives</h2>
+    <p style="text-align: center; color: var(--text-muted); margin-bottom: 35px; font-size: 15px;">
+      Click any article below to expand its full summary and explore the world of French gastronomy and movie trivia.
+    </p>
+
+    <!-- News Item 1: French Culinary (Using food.jpg) -->
+    <div class="news-dropdown-container">
+      <div class="news-img-side" style="background-image: url('IMG/food.jpg');"></div>
+      <div class="news-text-side">
+        <div class="news-toggle-header" onclick="toggleNews('news1')">
+          <div>
+            <span class="news-badge">Parisian Culinary</span>
+            <h3 style="color: var(--accent-burgundy); font-size: 21px; margin-top: 4px;">The Art of Traditional French Bistro Cooking</h3>
+            <p style="font-size: 13px; color: var(--text-muted); margin-top: 4px; font-style: italic;">
+              Discover the core essence of French bistro cooking, built around patience, aromatic herbs, and artisan tools.
+            </p>
+          </div>
+          <span style="font-weight: bold; font-size: 20px; color: var(--accent-burgundy);">▾</span>
+        </div>
+        <div id="news1" class="news-dropdown-content">
+          French cooking is deeply rooted in patience, fresh aromatic herbs, and precise culinary techniques. Traditional Parisian bistros emphasize slow-simmered dishes like Ratatouille—specifically the iconic Confit Byaldi—where each vegetable is sliced uniformly to absorb herbal olive oil and garlic flavors. Choosing the right cookware, such as heavy carbon steel pans, enameled stock pots, and balanced wooden spatulas, becomes the ultimate secret to achieving that authentic restaurant-quality sear and tenderness right in your home kitchen.
+        </div>
+      </div>
+    </div>
+
+    <!-- News Item 2: Movie Trivia Ratatouille (In English Paragraphs) -->
+    <div class="news-dropdown-container">
+      <div class="news-img-side" style="background-image: url('IMG/linguini.jpg'); background-position: center 30%;"></div>
+      <div class="news-text-side">
+        <div class="news-toggle-header" onclick="toggleNews('news2')">
+          <div>
+            <span class="news-badge">Movie Trivia</span>
+            <h3 style="color: var(--accent-burgundy); font-size: 21px; margin-top: 4px;">Behind-the-Scenes Secrets of Pixar's Ratatouille</h3>
+            <p style="font-size: 13px; color: var(--text-muted); margin-top: 4px; font-style: italic;">
+              Explore fascinating behind-the-scenes trivia from Pixar’s Academy Award-winning film about a passionate rat chef.
+            </p>
+          </div>
+          <span style="font-weight: bold; font-size: 20px; color: var(--accent-burgundy);">▾</span>
+        </div>
+        <div id="news2" class="news-dropdown-content">
+          The creation of Pixar's Ratatouille involved extensive culinary research and close collaboration with world-class professional chefs. World-renowned Michelin-starred chef Thomas Keller consulted directly with Pixar animators and personally designed the exquisite layered Confit Byaldi featured in the movie. To accurately render natural movements, animators kept live rats inside their studio offices for over a year to study their fur textures, whiskers, and mechanics. Beyond its groundbreaking animation, the film delivers a timeless message through Gusteau’s inspiring philosophy that anyone can cook when fueled by genuine passion.
+        </div>
+      </div>
+    </div>
+
+    <!-- News Item 3: Utensil Care -->
+    <div class="news-dropdown-container">
+      <div class="news-img-side" style="background-image: url('IMG/news-promo.jpg');"></div>
+      <div class="news-text-side">
+        <div class="news-toggle-header" onclick="toggleNews('news3')">
+          <div>
+            <span class="news-badge">Kitchen Guides</span>
+            <h3 style="color: var(--accent-burgundy); font-size: 21px; margin-top: 4px;">How to Maintain Wooden Kitchen Utensils Properly</h3>
+            <p style="font-size: 13px; color: var(--text-muted); margin-top: 4px; font-style: italic;">
+              Essential care tips to keep your mahogany spatulas and teak cutting boards durable, clean, and aesthetic.
+            </p>
+          </div>
+          <span style="font-weight: bold; font-size: 20px; color: var(--accent-burgundy);">▾</span>
+        </div>
+        <div id="news3" class="news-dropdown-content">
+          Hand-carved wooden spatulas and solid teak cutting boards add rustic warmth to any French bistro kitchen. However, wooden utensils require proper maintenance to prevent cracking or warping. Avoid soaking them in sink water or placing them inside dishwashers, as harsh moisture and heat weaken the natural grain. Instead, wash them gently with warm soapy water, dry them thoroughly with a clean cloth, and regularly apply food-grade mineral oil or beeswax to preserve their rich luster.
+        </div>
+      </div>
+    </div>
+
+    <!-- News Item 4: French Gastronomy -->
+    <div class="news-dropdown-container">
+      <div class="news-img-side" style="background-image: url('IMG/nostalgia.jpg');"></div>
+      <div class="news-text-side">
+        <div class="news-toggle-header" onclick="toggleNews('news4')">
+          <div>
+            <span class="news-badge">French Gastronomy</span>
+            <h3 style="color: var(--accent-burgundy); font-size: 21px; margin-top: 4px;">The History and Evolution of French Culinary Arts</h3>
+            <p style="font-size: 13px; color: var(--text-muted); margin-top: 4px; font-style: italic;">
+              Tracing centuries of culinary innovation that led French gastronomy to UNESCO heritage recognition.
+            </p>
+          </div>
+          <span style="font-weight: bold; font-size: 20px; color: var(--accent-burgundy);">▾</span>
+        </div>
+        <div id="news4" class="news-dropdown-content">
+          French culinary art has set global standards for centuries, originating in 17th-century royal courts when pioneer chefs transformed cooking by favoring natural herbs and aromatic stocks over heavy spices. Today, French gastronomy is officially recognized by UNESCO as intangible cultural heritage, celebrating the joyous ritual of gathering around a table to enjoy dishes crafted with exceptional technique and timeless kitchen tools.
+        </div>
+      </div>
+    </div>
+
+    <!-- News Item 5: Copper & Carbon Steel -->
+    <div class="news-dropdown-container">
+      <div class="news-img-side" style="background-image: url('IMG/news-arrival.jpg');"></div>
+      <div class="news-text-side">
+        <div class="news-toggle-header" onclick="toggleNews('news5')">
+          <div>
+            <span class="news-badge">Fun Facts</span>
+            <h3 style="color: var(--accent-burgundy); font-size: 21px; margin-top: 4px;">Why Copper &amp; Carbon Steel Are Essential in Paris</h3>
+            <p style="font-size: 13px; color: var(--text-muted); margin-top: 4px; font-style: italic;">
+              Understanding why professional Parisian chefs exclusively rely on copper saucepans and carbon steel cookware.
+            </p>
+          </div>
+          <span style="font-weight: bold; font-size: 20px; color: var(--accent-burgundy);">▾</span>
+        </div>
+        <div id="news5" class="news-dropdown-content">
+          Professional French chefs rely on copper and carbon steel cookware due to their superior thermal properties. Copper offers immediate heat responsiveness, granting chefs precise temperature control over delicate sauces and reductions. Meanwhile, carbon steel provides high-heat endurance similar to cast iron while remaining lightweight, heating faster, and developing a natural non-stick patina over time for flawless sautéing.
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer><p>&copy; 2026 Gusteau’s Atelier. Inspired by Ratatouille.</p></footer>
+  <script src="js/main.js"></script>
+  <script>
+    function toggleNews(id) {
+      const content = document.getElementById(id);
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    }
+  </script>
+</body>
+</html>

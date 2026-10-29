@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gusteau’s Atelier — Shop Catalog</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="promo-bar">Free shipping on orders over Rp200.000</div>
+
+ <header>
+    <div class="header-container">
+      <h1 class="logo" onclick="window.location.href='index.html'">Gusteau’s Atelier</h1>
+      <nav>
+        <a href="index.html" class="nav-link">Home</a>
+        
+        <!-- DROPDOWN SHOP CATALOG -->
+        <div class="dropdown">
+          <a href="shop.html" class="nav-link">Shop Catalog ▾</a>
+          <div class="dropdown-content">
+            <a href="shop.html#preparation">Preparation Tools</a>
+            <a href="shop.html#baking">Baking &amp; Pastry</a>
+            <a href="shop.html#dining">Dining &amp; Cookware</a>
+          </div>
+        </div>
+
+        <a href="news.html" class="nav-link">News &amp; Articles</a>
+
+        <!-- DROPDOWN DISTRIBUTORS -->
+        <div class="dropdown">
+          <a href="distributor.html" class="nav-link">Distributors ▾</a>
+          <div class="dropdown-content">
+            <a href="distributor.html#hubs">Regional Hubs</a>
+            <a href="distributor.html#partner-form">Application Form</a>
+          </div>
+        </div>
+
+        <!-- DROPDOWN OUR STORY -->
+        <div class="dropdown">
+          <a href="about.html" class="nav-link">Our Story ▾</a>
+          <div class="dropdown-content">
+            <a href="about.html#story">About Us</a>
+            <a href="about.html#contact">Contact Us</a>
+          </div>
+        </div>
+      </nav>
+      <div><a class="tombol tombol-cart" href="cart.html">🛒 Cart (<span id="cart-count">0</span>)</a></div>
+    </div>
+  </header>
+
+  <main class="main-container">
+    <h2 class="judul-section">Complete Product Catalog</h2>
+    <p style="text-align:center; color: var(--text-muted); margin-bottom: 35px;">Browse our full collection separated into distinct kitchen sections.</p>
+
+    <!-- SECTION 1: PREPARATION TOOLS -->
+    <div id="preparation" style="margin-bottom: 50px;">
+      <h3 style="color: var(--olive-green); font-size: 24px; margin-bottom: 20px; border-bottom: 2px solid var(--border-subtle); padding-bottom: 8px;">Preparation Tools</h3>
+      <div class="grid-cards">
+        <div class="kartu">
+          <span class="product-badge badge-best">Best Seller</span>
+          <div><div class="img-placeholder p1"></div><span class="kategori-label">Preparation</span><h3>Remy's Wooden Spatula</h3><p class="harga">Rp45.000</p></div>
+          <a class="tombol" href="product-detail.html?id=spatula" style="margin-top: 10px;">View Details</a>
+        </div>
+        <div class="kartu">
+          <span class="product-badge badge-new">New</span>
+          <div><div class="img-placeholder p2"></div><span class="kategori-label">Preparation</span><h3>Precision Kitchen Timer</h3><p class="harga">Rp75.000</p></div>
+          <a class="tombol" href="product-detail.html?id=timer" style="margin-top: 10px;">View Details</a>
+        </div>
+        <div class="kartu">
+          <div><div class="img-placeholder p3"></div><span class="kategori-label">Preparation</span><h3>Ratatouille Cutting Board</h3><p class="harga">Rp120.000</p></div>
+          <a class="tombol" href="product-detail.html?id=cutting" style="margin-top: 10px;">View Details</a>
+        </div>
+        <div class="kartu">
+          <span class="product-badge badge-new">New</span>
+          <div><div class="img-placeholder p4"></div><span class="kategori-label">Preparation</span><h3>Little Chef Whisk &amp; Spoon</h3><p class="harga">Rp55.000</p></div>
+          <a class="tombol" href="product-detail.html?id=whisk" style="margin-top: 10px;">View Details</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 2: BAKING & PASTRY -->
+    <div id="baking" style="margin-bottom: 50px;">
+      <h3 style="color: var(--olive-green); font-size: 24px; margin-bottom: 20px; border-bottom: 2px solid var(--border-subtle); padding-bottom: 8px;">Baking &amp; Pastry</h3>
+      <div class="grid-cards">
+        <div class="kartu">
+          <span class="product-badge badge-best">Popular</span>
+          <div><div class="img-placeholder p5"></div><span class="kategori-label">Baking</span><h3>Cheese Silicone Mold</h3><p class="harga">Rp65.000</p></div>
+          <a class="tombol" href="product-detail.html?id=mould" style="margin-top: 10px;">View Details</a>
+        </div>
+        <div class="kartu">
+          <div><div class="img-placeholder p6"></div><span class="kategori-label">Baking</span><h3>Mixing Bowl</h3><p class="harga">Rp150.000</p></div>
+          <a class="tombol" href="product-detail.html?id=bowl" style="margin-top: 10px;">View Details</a>
+        </div>
+        <div class="kartu">
+          <span class="product-badge badge-new">New</span>
+          <div><div class="img-placeholder p7"></div><span class="kategori-label">Baking</span><h3>Chef Gingham Apron</h3><p class="harga">Rp95.000</p></div>
+          <a class="tombol" href="product-detail.html?id=apron" style="margin-top: 10px;">View Details</a>
+        </div>
+        <div class="kartu">
+          <div><div class="img-placeholder p8"></div><span class="kategori-label">Baking</span><h3>Parisian Rolling Pin</h3><p class="harga">Rp135.000</p></div>
+          <a class="tombol" href="product-detail.html?id=pin" style="margin-top: 10px;">View Details</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 3: DINING & COOKWARE (Termasuk Pan & Pot) -->
+    <div id="dining" style="margin-bottom: 50px;">
+      <h3 style="color: var(--olive-green); font-size: 24px; margin-bottom: 20px; border-bottom: 2px solid var(--border-subtle); padding-bottom: 8px;">Dining &amp; Cookware</h3>
+      <div class="grid-cards">
+        <div class="kartu">
+          <span class="product-badge badge-best">Best Seller</span>
+          <div><div class="img-placeholder p9"></div><span class="kategori-label">Dining</span><h3>Bistro Ceramic Plate</h3><p class="harga">Rp85.000</p></div>
+          <a class="tombol" href="product-detail.html?id=plate" style="margin-top: 10px;">View Details</a>
+        </div>
+        <div class="kartu">
+          <div><div class="img-placeholder p10"></div><span class="kategori-label">Dining</span><h3>Minimalist Measuring Jug</h3><p class="harga">Rp110.000</p></div>
+          <a class="tombol" href="product-detail.html?id=glass" style="margin-top: 10px;">View Details</a>
+        </div>
+        <div class="kartu">
+          <span class="product-badge badge-new">New</span>
+          <div><div class="img-placeholder p11"></div><span class="kategori-label">Cookware</span><h3>Carbon Steel Bistro Pan</h3><p class="harga">Rp250.000</p></div>
+          <a class="tombol" href="product-detail.html?id=pan" style="margin-top: 10px;">View Details</a>
+        </div>
+        <div class="kartu">
+          <span class="product-badge badge-best">Popular</span>
+          <div><div class="img-placeholder p12"></div><span class="kategori-label">Cookware</span><h3>French Enamel Stock Pot</h3><p class="harga">Rp320.000</p></div>
+          <a class="tombol" href="product-detail.html?id=pot" style="margin-top: 10px;">View Details</a>
+        </div>
+        <div class="kartu">
+          <span class="product-badge badge-new">New</span>
+          <div><div class="img-placeholder p13"></div><span class="kategori-label">Dining</span><h3>Vintage Gold Cutlery Set</h3><p class="harga">Rp180.000</p></div>
+          <a class="tombol" href="product-detail.html?id=set" style="margin-top: 10px;">View Details</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer><p>&copy; 2026 Gusteau’s Atelier.</p></footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

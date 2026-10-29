@@ -1,0 +1,452 @@
+/* ==========================================================================
+   GUSTEAU'S ATELIER — PURE FRENCH KITCHEN PALETTE
+   ========================================================================== */
+
+:root {
+  --bg-cream: #f7f2ea;
+  --bg-card: #ffffff;
+  --text-dark: #2c221e;
+  --text-muted: #6b5b52;
+  
+  --accent-burgundy: #9e2a2b;
+  --accent-burgundy-dark: #7c2021;
+  --accent-mustard: #e09f3e;
+  --olive-green: #588157;
+  --remy-blue: #3a506b;
+  --border-subtle: #e6dfd5;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: var(--bg-cream);
+  color: var(--text-dark);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, .logo {
+  font-family: 'Playfair Display', serif;
+}
+
+/* ===== WELCOME OVERLAY SCREEN ===== */
+#welcome-screen {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: linear-gradient(135deg, var(--remy-blue) 0%, var(--text-dark) 100%);
+  color: var(--bg-cream);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+#welcome-screen.slide-up {
+  transform: translateY(-100%);
+}
+
+.welcome-title {
+  font-size: 56px;
+  font-style: italic;
+  color: var(--accent-mustard);
+  margin-bottom: 8px;
+}
+
+.welcome-subtitle {
+  font-size: 16px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--bg-cream);
+  font-weight: 700;
+}
+
+/* ===== PROMO BAR & NAVBAR ===== */
+.promo-bar {
+  background-color: var(--remy-blue);
+  color: var(--bg-cream);
+  text-align: center;
+  padding: 8px 15px;
+  font-size: 13px;
+  font-weight: bold;
+}
+.promo-bar strong { color: var(--accent-mustard); }
+
+header {
+  background-color: rgba(247, 242, 234, 0.98);
+  border-bottom: 3px solid var(--accent-mustard);
+  position: sticky; top: 0; z-index: 1000;
+  box-shadow: 0 4px 15px rgba(44, 34, 30, 0.05);
+}
+
+.header-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 12px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: var(--accent-burgundy);
+  font-size: 28px;
+  font-style: italic;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.nav-link {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--text-dark);
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 16px;
+  transition: all 0.2s;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--accent-burgundy);
+  background-color: rgba(158, 42, 43, 0.08);
+}
+
+/* Dropdown Navbar universal */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  background-color: var(--bg-card);
+  min-width: 190px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 1001;
+}
+
+.dropdown-content a {
+  color: var(--text-dark);
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--bg-cream);
+  color: var(--accent-burgundy);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.main-container {
+  max-width: 1100px;
+  width: 100%;
+  margin: 30px auto;
+  padding: 0 20px;
+  flex: 1;
+}
+
+.tombol {
+  background-color: var(--accent-burgundy);
+  color: #ffffff !important;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 4px 12px rgba(158, 42, 43, 0.2);
+}
+.tombol:hover {
+  background-color: var(--accent-burgundy-dark);
+  transform: translateY(-2px);
+}
+.tombol-cart {
+  background-color: var(--olive-green);
+}
+
+/* ===== NEWS SLIDER ===== */
+.news-slider-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+  margin-bottom: 45px;
+  border: 2px solid var(--border-subtle);
+  background-color: var(--bg-card);
+  box-shadow: 0 6px 20px rgba(44, 34, 30, 0.05);
+}
+
+.news-slide-track {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.news-slide-card {
+  min-width: 100%;
+  box-sizing: border-box;
+  height: 380px;
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  align-items: flex-end;
+}
+
+.slide-linguini {
+  background-position: center 30% !important;
+  background-size: cover !important;
+}
+
+.news-content-bottom {
+  padding: 30px 40px;
+  color: #ffffff;
+  width: 100%;
+}
+
+.news-badge {
+  background-color: var(--accent-mustard);
+  color: var(--text-dark);
+  font-size: 11px;
+  font-weight: bold;
+  padding: 4px 12px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.news-content-bottom h3 {
+  font-size: 26px;
+  color: #ffffff;
+  margin-bottom: 6px;
+  font-style: italic;
+}
+
+.news-content-bottom p {
+  font-size: 14px;
+  color: var(--bg-cream);
+  max-width: 600px;
+  margin-bottom: 15px;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(44, 34, 30, 0.85);
+  color: #ffffff;
+  border: none;
+  font-size: 18px;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+  transition: background 0.2s;
+}
+.slider-btn:hover { background: var(--accent-burgundy); }
+.prev-btn { left: 15px; }
+.next-btn { right: 15px; }
+
+/* ===== KARTU PRODUK ===== */
+.judul-section {
+  color: var(--accent-burgundy);
+  margin-bottom: 25px;
+  font-style: italic;
+  font-size: 32px;
+  text-align: center;
+}
+
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.kartu {
+  position: relative;
+  background: var(--bg-card);
+  border: 2px solid var(--border-subtle);
+  border-radius: 18px;
+  padding: 22px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(44, 34, 30, 0.04);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s, border-color 0.3s;
+}
+.kartu:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-burgundy);
+}
+
+.product-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: var(--remy-blue);
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.badge-best { background-color: var(--accent-burgundy); }
+.badge-new { background-color: var(--olive-green); }
+
+.img-placeholder {
+  width: 100%;
+  height: 180px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-color: #ffffff;
+}
+
+.p1  { background-image: url('../IMG/spatula.jpg'); }
+.p2  { background-image: url('../IMG/timer.jpg'); }
+.p3  { background-image: url('../IMG/cutting.jpg'); }
+.p4  { background-image: url('../IMG/whisk.jpg'); }
+.p5  { background-image: url('../IMG/mould.jpg'); }
+.p6  { background-image: url('../IMG/bowl.jpg'); }
+.p7  { background-image: url('../IMG/apron.jpg'); }
+.p8  { background-image: url('../IMG/pin.jpg'); }
+.p9  { background-image: url('../IMG/plate.jpg'); }
+.p10 { background-image: url('../IMG/glass.jpg'); }
+.p11 { background-image: url('../IMG/carbon steel pan.webp'); }
+.p12 { background-image: url('../IMG/pot.jpg'); }
+.p13 { background-image: url('../IMG/silverware set.jpg'); }
+
+.hub-bandung { background-image: url('../IMG/hub-bandung.jpg'); background-size: cover !important; }
+.hub-jepara  { background-image: url('../IMG/hub-jepara.jpg'); background-size: cover !important; }
+.hub-paris   { background-image: url('../IMG/hub-paris.jpg'); background-size: cover !important; }
+
+.partner-banner-bg {
+  background: linear-gradient(to right, rgba(44, 34, 30, 0.9), rgba(58, 80, 107, 0.85)), 
+              url('../IMG/partner.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* News Dropdown Layout 3 Kolom */
+.news-dropdown-container {
+  display: flex;
+  background: var(--bg-card);
+  border: 2px solid var(--border-subtle);
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 25px;
+  box-shadow: 0 6px 18px rgba(44, 34, 30, 0.04);
+  transition: border-color 0.3s;
+}
+.news-dropdown-container:hover {
+  border-color: var(--accent-burgundy);
+}
+
+.news-img-side {
+  flex: 1;
+  min-height: 220px;
+  background-size: cover;
+  background-position: center;
+  background-color: #f0ece1;
+}
+
+.news-text-side {
+  flex: 2;
+  padding: 25px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.news-toggle-header {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.news-dropdown-content {
+  display: none;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px dashed var(--border-subtle);
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.kotak {
+  background: var(--bg-card);
+  border: 2px solid var(--border-subtle);
+  border-radius: 18px;
+  padding: 30px;
+  margin-bottom: 35px;
+  box-shadow: 0 6px 20px rgba(44, 34, 30, 0.04);
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  font-size: 14px;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border-subtle);
+  background-color: var(--bg-card);
+  margin-top: auto;
+  width: 100%;
+}
+
+@media(max-width: 768px) {
+  .news-dropdown-container { flex-direction: column; }
+  .news-img-side { height: 180px; width: 100%; }
+}
+
+/* Perbaikan Tampilan Banner Distributor supaya Lebih Lega dan Proporsional */
+.banner-cook-together {
+  background: linear-gradient(135deg, rgba(44, 34, 30, 0.75) 0%, rgba(58, 80, 107, 0.7) 100%), 
+              url('../IMG/cook together.jpg') !important;
+  background-size: cover !important;
+  background-position: center 40% !important; /* Fokus titik tengah-atas foto supaya orangnya kelihatan jelas */
+  min-height: 380px !important;              /* Membuat kotak bannernya lebih tinggi dan luas */
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  border-radius: 20px !important;
+  box-shadow: 0 10px 25px rgba(44, 34, 30, 0.15) !important;
+}

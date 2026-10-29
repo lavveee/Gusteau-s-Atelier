@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gusteau’s Atelier — Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="welcome-screen">
+    <h1 class="welcome-title">Bienvenue</h1>
+    <p class="welcome-subtitle">Anyone Can Cook!</p>
+  </div>
+
+  <div class="promo-bar">Use voucher code <strong>REMY10</strong> for 10% off at checkout!</div>
+
+  <header>
+    <div class="header-container">
+      <h1 class="logo" onclick="window.location.href='index.html'">Gusteau’s Atelier</h1>
+      <nav>
+        <a href="index.html" class="nav-link">Home</a>
+        
+        <!-- DROPDOWN SHOP CATALOG -->
+        <div class="dropdown">
+          <a href="shop.html" class="nav-link">Shop Catalog ▾</a>
+          <div class="dropdown-content">
+            <a href="shop.html#preparation">Preparation Tools</a>
+            <a href="shop.html#baking">Baking &amp; Pastry</a>
+            <a href="shop.html#dining">Dining &amp; Cookware</a>
+          </div>
+        </div>
+
+        <a href="news.html" class="nav-link">News &amp; Articles</a>
+
+        <!-- DROPDOWN DISTRIBUTORS -->
+        <div class="dropdown">
+          <a href="distributor.html" class="nav-link">Distributors ▾</a>
+          <div class="dropdown-content">
+            <a href="distributor.html#hubs">Regional Hubs</a>
+            <a href="distributor.html#partner-form">Application Form</a>
+          </div>
+        </div>
+
+        <!-- DROPDOWN OUR STORY -->
+        <div class="dropdown">
+          <a href="about.html" class="nav-link">Our Story ▾</a>
+          <div class="dropdown-content">
+            <a href="about.html#story">About Us</a>
+            <a href="about.html#contact">Contact Us</a>
+          </div>
+        </div>
+      </nav>
+      <div><a class="tombol tombol-cart" href="cart.html">🛒 Cart (<span id="cart-count">0</span>)</a></div>
+    </div>
+  </header>
+
+  <main class="main-container">
+    
+    <!-- 1. 4 SLIDE NEWS LENGKAP (PROMO, REVIEW, CULINARY, LINGUINI) -->
+    <div class="news-slider-wrapper">
+      <div class="news-slide-track" id="slide-track">
+        
+        <!-- Slide 1: Promo -->
+        <div class="news-slide-card" style="background: linear-gradient(to top, rgba(44,34,30,0.9) 0%, rgba(44,34,30,0.2) 60%), url('IMG/news-promo.jpg');">
+          <div class="news-content-bottom">
+            <span class="news-badge">Special Promo</span>
+            <h3>Get 10% Off with Code REMY10</h3>
+            <p>Use voucher REMY10 on your checkout to receive an instant 10% discount on all artisan kitchenware.</p>
+            <a class="tombol" href="shop.html">Shop Now</a>
+          </div>
+        </div>
+
+        <!-- Slide 2: New Arrival -->
+        <div class="news-slide-card" style="background: linear-gradient(to top, rgba(44,34,30,0.9) 0%, rgba(44,34,30,0.2) 60%), url('IMG/news-arrival.jpg');">
+          <div class="news-content-bottom">
+            <span class="news-badge">New Arrival</span>
+            <h3>Vintage Cutlery &amp; Pans</h3>
+            <p>Elevate your dining setup and cooking experience with our premium carbon steel pans and gold silverware sets.</p>
+            <a class="tombol" href="shop.html">Shop Now</a>
+          </div>
+        </div>
+
+        <!-- Slide 3: Culinary in Paris (food.jpg) -->
+        <div class="news-slide-card" style="background: linear-gradient(to top, rgba(44,34,30,0.9) 0%, rgba(44,34,30,0.2) 60%), url('IMG/food.jpg');">
+          <div class="news-content-bottom">
+            <span class="news-badge">Parisian Culinary</span>
+            <h3>Exploring Authentic Paris Kitchen Culture</h3>
+            <p>Discover how traditional French bistro techniques and fresh local herbs inspire every culinary tool we curate.</p>
+            <a class="tombol" href="news.html">Read Full News</a>
+          </div>
+        </div>
+
+        <!-- Slide 4: Ratatouille Fun Facts (linguini.jpg - Adjusted Zoom) -->
+        <div class="news-slide-card slide-linguini" style="background: linear-gradient(to top, rgba(44,34,30,0.9) 0%, rgba(44,34,30,0.2) 60%), url('IMG/linguini.jpg');">
+          <div class="news-content-bottom">
+            <span class="news-badge">Ratatouille Fun Facts</span>
+            <h3>The Secrets Behind Chef Remy's Kitchen</h3>
+            <p>Learn fun trivia about the award-winning animated movie and how a rat became Paris's finest culinary genius.</p>
+            <a class="tombol" href="news.html">Read Full News</a>
+          </div>
+        </div>
+
+      </div>
+      <button class="slider-btn prev-btn" onclick="moveSlide(-1)">&#10094;</button>
+      <button class="slider-btn next-btn" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+
+    <!-- 2. KOLOM PUTIH DESKRIPSI WEBSITE (1 PARAGRAF BAHASA INGGRIS) -->
+    <div class="kotak" style="background: var(--bg-card); padding: 25px 30px; margin-bottom: 40px; border: 2px solid var(--border-subtle); border-radius: 18px;">
+      <p style="font-size: 15px; color: var(--text-dark); line-height: 1.8; margin: 0;">
+        <strong>Gusteau’s Atelier</strong> is an authentic French-inspired online kitchenware boutique dedicated to home chefs, culinary students, and food lovers who appreciate elegant Parisian cookware.
+      </p>
+    </div>
+
+    <!-- 3. WHY SHOP WITH US? -->
+    <h2 class="judul-section">Why Shop With Us?</h2>
+    <div class="kotak" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; text-align: center; margin-bottom: 40px;">
+      <div>
+        <h3 style="color: var(--accent-burgundy); margin-bottom: 6px;">Authentic French Design</h3>
+        <p style="font-size: 14px; color: var(--text-muted);">Curated directly with certified Parisian bistro and kitchen standards.</p>
+      </div>
+      <div>
+        <h3 style="color: var(--accent-burgundy); margin-bottom: 6px;">Secure Packaging</h3>
+        <p style="font-size: 14px; color: var(--text-muted);">Packed securely with multi-layer cushioning for safe transit across regions.</p>
+      </div>
+      <div>
+        <h3 style="color: var(--accent-burgundy); margin-bottom: 6px;">Complimentary Recipe Card</h3>
+        <p style="font-size: 14px; color: var(--text-muted);">Every single package includes a special mini French recipe card from Remy.</p>
+      </div>
+    </div>
+
+    <!-- 4. FEATURED BEST SELLERS -->
+    <h2 class="judul-section">Featured Best Sellers</h2>
+    <div class="grid-cards">
+      
+      <div class="kartu">
+        <span class="product-badge badge-best">Best Seller</span>
+        <div>
+          <div class="img-placeholder p1"></div>
+          <span class="kategori-label">Preparation</span>
+          <h3>Remy's Wooden Spatula</h3>
+          <p class="harga">Rp45.000</p>
+        </div>
+        <a class="tombol" href="product-detail.html?id=spatula" style="margin-top: 10px;">View Details</a>
+      </div>
+
+      <div class="kartu">
+        <span class="product-badge badge-new">New</span>
+        <div>
+          <div class="img-placeholder p11"></div>
+          <span class="kategori-label">Cookware</span>
+          <h3>Carbon Steel Bistro Pan</h3>
+          <p class="harga">Rp250.000</p>
+        </div>
+        <a class="tombol" href="product-detail.html?id=pan" style="margin-top: 10px;">View Details</a>
+      </div>
+
+      <div class="kartu">
+        <span class="product-badge badge-best">Popular</span>
+        <div>
+          <div class="img-placeholder p9"></div>
+          <span class="kategori-label">Dining</span>
+          <h3>Bistro Ceramic Plate</h3>
+          <p class="harga">Rp85.000</p>
+        </div>
+        <a class="tombol" href="product-detail.html?id=plate" style="margin-top: 10px;">View Details</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer><p>&copy; 2026 Gusteau’s Atelier. Inspired by Ratatouille.</p></footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gusteau’s Atelier — Checkout</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <h1 class="logo" onclick="window.location.href='index.html'">Gusteau’s Atelier</h1>
+      <nav>
+        <a href="index.html" class="nav-link">Home</a>
+        
+        <!-- DROPDOWN SHOP CATALOG -->
+        <div class="dropdown">
+          <a href="shop.html" class="nav-link">Shop Catalog ▾</a>
+          <div class="dropdown-content">
+            <a href="shop.html#preparation">Preparation Tools</a>
+            <a href="shop.html#baking">Baking &amp; Pastry</a>
+            <a href="shop.html#dining">Dining &amp; Cookware</a>
+          </div>
+        </div>
+
+        <a href="news.html" class="nav-link">News &amp; Articles</a>
+
+        <!-- DROPDOWN DISTRIBUTORS -->
+        <div class="dropdown">
+          <a href="distributor.html" class="nav-link">Distributors ▾</a>
+          <div class="dropdown-content">
+            <a href="distributor.html#hubs">Regional Hubs</a>
+            <a href="distributor.html#partner-form">Application Form</a>
+          </div>
+        </div>
+
+        <!-- DROPDOWN OUR STORY -->
+        <div class="dropdown">
+          <a href="about.html" class="nav-link">Our Story ▾</a>
+          <div class="dropdown-content">
+            <a href="about.html#story">About Us</a>
+            <a href="about.html#contact">Contact Us</a>
+          </div>
+        </div>
+      </nav>
+      <div><a class="tombol tombol-cart" href="cart.html">🛒 Cart (<span id="cart-count">0</span>)</a></div>
+    </div>
+  </header>
+  <main class="main-container" style="max-width: 650px;">
+    <h2 class="judul-section">Checkout &amp; Payment</h2>
+    
+    <form class="kotak" onsubmit="handleCheckout(event)">
+      <label style="font-weight:bold; display:block; margin-bottom:5px;">Full Name</label>
+      <input type="text" required placeholder="Linguini" style="width:100%; padding:10px; margin-bottom:12px; border:1px solid var(--border-subtle); border-radius:8px; font-family:'Quicksand';">
+      
+      <label style="font-weight:bold; display:block; margin-bottom:5px;">Select Shipping Region (Dispatched from Bandung)</label>
+      <select id="shipping-region" style="width:100%; padding:10px; margin-bottom:12px; border:1px solid var(--border-subtle); border-radius:8px; background:#fff; font-family:'Quicksand';">
+        <option>Bandung Area (Instant/Same Day)</option>
+        <option>Jabodetabek & West Java</option>
+        <option>Central & East Java</option>
+        <option>Outer Islands (Sumatra, Bali, Sulawesi, etc.)</option>
+      </select>
+
+      <label style="font-weight:bold; display:block; margin-bottom:5px;">Complete Address</label>
+      <textarea rows="3" required placeholder="Street address, City, Postal Code" style="width:100%; padding:10px; margin-bottom:12px; border:1px solid var(--border-subtle); border-radius:8px; font-family:'Quicksand';"></textarea>
+
+      <!-- Input Voucher Code -->
+      <label style="font-weight:bold; display:block; margin-bottom:5px;">Voucher Code (Optional)</label>
+      <input type="text" id="voucher-code" placeholder="Enter voucher code (e.g., REMY10)" style="width:100%; padding:10px; margin-bottom:12px; border:1px solid var(--border-subtle); border-radius:8px; font-family:'Quicksand';">
+
+      <label style="font-weight:bold; display:block; margin-bottom:5px;">Payment Method</label>
+      <select id="payment-method" style="width:100%; padding:10px; margin-bottom:20px; border:1px solid var(--border-subtle); border-radius:8px; background:#fff; font-family:'Quicksand';">
+        <option>Instant Bank Transfer (BCA, Mandiri, BRI)</option>
+        <option>E-Wallet (GoPay, OVO, QRIS)</option>
+        <option>Cash on Delivery (COD)</option>
+      </select>
+
+      <button type="submit" class="tombol" style="width:100%; text-align:center;">Complete Order</button>
+    </form>
+  </main>
+  <footer><p>&copy; 2026 Gusteau’s Atelier.</p></footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

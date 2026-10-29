@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gusteau’s Atelier — Our Story &amp; Project Info</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="promo-bar">Discover the magic behind the kitchen!</div>
+
+  <header>
+    <div class="header-container">
+      <h1 class="logo" onclick="window.location.href='index.html'">Gusteau’s Atelier</h1>
+      <nav>
+        <a href="index.html" class="nav-link">Home</a>
+        
+        <!-- DROPDOWN SHOP CATALOG -->
+        <div class="dropdown">
+          <a href="shop.html" class="nav-link">Shop Catalog ▾</a>
+          <div class="dropdown-content">
+            <a href="shop.html#preparation">Preparation Tools</a>
+            <a href="shop.html#baking">Baking &amp; Pastry</a>
+            <a href="shop.html#dining">Dining &amp; Cookware</a>
+          </div>
+        </div>
+
+        <a href="news.html" class="nav-link">News &amp; Articles</a>
+
+        <!-- DROPDOWN DISTRIBUTORS -->
+        <div class="dropdown">
+          <a href="distributor.html" class="nav-link">Distributors ▾</a>
+          <div class="dropdown-content">
+            <a href="distributor.html#hubs">Regional Hubs</a>
+            <a href="distributor.html#partner-form">Application Form</a>
+          </div>
+        </div>
+
+        <!-- DROPDOWN OUR STORY -->
+        <div class="dropdown">
+          <a href="about.html" class="nav-link">Our Story ▾</a>
+          <div class="dropdown-content">
+            <a href="about.html#story">About Us</a>
+            <a href="about.html#contact">Contact Us</a>
+          </div>
+        </div>
+      </nav>
+      <div><a class="tombol tombol-cart" href="cart.html">🛒 Cart (<span id="cart-count">0</span>)</a></div>
+    </div>
+  </header>
+
+  <main class="main-container">
+    <h2 class="judul-section">Our Story &amp; Project Details</h2>
+    
+    <!-- Penjelasan Bahwa Ini Proyek Tugas Informatika -->
+    <div id="story" class="kotak">
+      <h3 style="color: var(--accent-burgundy); font-size: 24px; margin-bottom: 12px; font-style: italic;">Informatics School Project Notice</h3>
+      <p style="font-size: 15px; color: var(--text-dark); margin-bottom: 12px;">
+        Please note that <strong>Gusteau’s Atelier</strong> is an e-commerce simulation website created purely as an academic project for an Informatics / Computer Science assignment. All products, transactions, and inventories shown are part of a school portfolio demonstration.
+      </p>
+      <p style="font-size: 14px; color: var(--text-muted);">
+        Visual assets and design references are collected for educational purposes. You can inspect the photo sources and reference links by opening our dedicated sources page below:
+      </p>
+      <div style="margin-top: 20px;">
+        <a class="tombol" href="sources.html" target="_blank">View Photo Sources &amp; References ↗</a>
+      </div>
+    </div>
+
+    <!-- Form Contact Us -->
+    <div id="contact" class="kotak">
+      <h3 style="color: var(--accent-burgundy); margin-bottom: 8px; font-style: italic;">Have Any Problem? Contact Us!</h3>
+      <p style="margin-bottom: 15px; color: var(--text-muted); font-size: 14px;">Need help or have questions regarding this project? Send a message below:</p>
+      
+      <form onsubmit="event.preventDefault(); alert('Message sent successfully! Thank you for reviewing our project.');">
+        <label style="font-weight:bold; display:block; margin-bottom:5px;">Your Name</label>
+        <input type="text" required placeholder="Linguini" style="width:100%; padding:10px; margin-bottom:10px; border:1px solid var(--border-subtle); border-radius:8px; font-family:'Quicksand';">
+        
+        <label style="font-weight:bold; display:block; margin-bottom:5px;">Your Email</label>
+        <input type="email" required placeholder="chef@gusteau.com" style="width:100%; padding:10px; margin-bottom:10px; border:1px solid var(--border-subtle); border-radius:8px; font-family:'Quicksand';">
+        
+        <label style="font-weight:bold; display:block; margin-bottom:5px;">Your Message</label>
+        <textarea rows="3" required placeholder="Write your feedback..." style="width:100%; padding:10px; margin-bottom:15px; border:1px solid var(--border-subtle); border-radius:8px; font-family:'Quicksand';"></textarea>
+        
+        <button type="submit" class="tombol">Send Message</button>
+      </form>
+    </div>
+  </main>
+
+  <footer><p>&copy; 2026 Gusteau’s Atelier. Informatics School Project.</p></footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gusteau’s Atelier — Distributors &amp; Partnership</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="promo-bar">Expand your kitchen supply business with Gusteau’s Atelier!</div>
+
+  <header>
+    <div class="header-container">
+      <h1 class="logo" onclick="window.location.href='index.html'">Gusteau’s Atelier</h1>
+      <nav>
+        <a href="index.html" class="nav-link">Home</a>
+        
+        <div class="dropdown">
+          <a href="shop.html" class="nav-link">Shop Catalog ▾</a>
+          <div class="dropdown-content">
+            <a href="shop.html#preparation">Preparation Tools</a>
+            <a href="shop.html#baking">Baking &amp; Pastry</a>
+            <a href="shop.html#dining">Dining &amp; Cookware</a>
+          </div>
+        </div>
+
+        <a href="news.html" class="nav-link">News &amp; Articles</a>
+
+        <div class="dropdown">
+          <a href="distributor.html" class="nav-link active">Distributors ▾</a>
+          <div class="dropdown-content">
+            <a href="distributor.html#hubs">Regional Hubs</a>
+            <a href="distributor.html#partner-form">Application Form</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <a href="about.html" class="nav-link">Our Story ▾</a>
+          <div class="dropdown-content">
+            <a href="about.html#story">About Us</a>
+            <a href="about.html#contact">Contact Us</a>
+          </div>
+        </div>
+      </nav>
+      <div><a class="tombol tombol-cart" href="cart.html">🛒 Cart (<span id="cart-count">0</span>)</a></div>
+    </div>
+  </header>
+
+  <main class="main-container">
+    
+   <!-- BANNER PARTNER MENGGUNAKAN cook together.jpg -->
+  <div id="partner-banner" class="kotak banner-cook-together" style="color: #fff; text-align: center; padding: 50px 25px; margin-top: 10px;">
+    <h2 style="color: var(--accent-mustard); font-size: 32px; margin-bottom: 10px; font-style: italic;">Do You Want to Partner With Us?</h2>
+    <p style="font-size: 15px; color: var(--bg-cream); max-width: 650px; margin: 0 auto 22px auto;">
+    Join our growing network as an official distributor in your city. Supply high-quality aesthetic French kitchenware to passionate home chefs across Indonesia!
+    </p>
+    <a class="tombol" href="#partner-form" style="background-color: var(--accent-mustard); color: var(--text-dark) !important;">Apply for Partnership Below</a>
+  </div>
+
+    <!-- WHY PARTNER WITH US? -->
+    <h2 class="judul-section">Why Partner With Us?</h2>
+    <div class="grid-cards" style="margin-bottom: 45px;">
+      <div class="kotak" style="text-align: center; margin-bottom: 0;">
+        <h3 style="color: var(--accent-burgundy); margin-bottom: 8px;">Wholesale Discounts</h3>
+        <p style="font-size: 13px; color: var(--text-muted);">Enjoy up to 30% wholesale price reduction on bulk kitchen utensil orders.</p>
+      </div>
+
+      <div class="kotak" style="text-align: center; margin-bottom: 0;">
+        <h3 style="color: var(--accent-burgundy); margin-bottom: 8px;">Exclusive Packaging</h3>
+        <p style="font-size: 13px; color: var(--text-muted);">Receive authentic Parisian eco-friendly gift boxes for your retail customers.</p>
+      </div>
+
+      <div class="kotak" style="text-align: center; margin-bottom: 0;">
+        <h3 style="color: var(--accent-burgundy); margin-bottom: 8px;">Priority Dispatch</h3>
+        <p style="font-size: 13px; color: var(--text-muted);">Fast-track shipment dispatch directly from our central hub in Bandung.</p>
+      </div>
+    </div>
+
+    <!-- REGIONAL DISTRIBUTORS -->
+    <h2 id="hubs" class="judul-section">Our Regional Distributors</h2>
+    <p style="text-align:center; color: var(--text-muted); margin-bottom: 30px;">
+      Explore our active distribution hubs currently operating across key cities.
+    </p>
+
+    <div class="grid-cards" style="margin-bottom: 45px;">
+      <div class="kartu">
+        <div class="img-placeholder hub-bandung"></div>
+        <span class="kategori-label">Main Central Hub</span>
+        <h3>Bandung Central Hub</h3>
+        <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 12px;">Located in Ciwaruga, managing regional stock dispatch and quality control.</p>
+        <span style="font-size: 12px; font-weight: bold; color: var(--olive-green);">Status: Active Dispatch</span>
+      </div>
+
+      <div class="kartu">
+        <div class="img-placeholder hub-jepara"></div>
+        <span class="kategori-label">Woodcraft Partner</span>
+        <h3>Jepara Craft Workshop</h3>
+        <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 12px;">Crafting hand-carved mahogany spatulas and teak wooden cutting boards.</p>
+        <span style="font-size: 12px; font-weight: bold; color: var(--olive-green);">Status: Production Hub</span>
+      </div>
+
+      <div class="kartu">
+        <div class="img-placeholder hub-paris"></div>
+        <span class="kategori-label">Design Bureau</span>
+        <h3>Parisian Blueprint Lab</h3>
+        <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 12px;">Designing French bistro aesthetics, ceramic finishes, and vintage cutlery.</p>
+        <span style="font-size: 12px; font-weight: bold; color: var(--remy-blue);">Status: Creative Studio</span>
+      </div>
+    </div>
+
+    <!-- APPLICATION FORM -->
+    <div id="partner-form" class="kotak" style="max-width: 700px; margin: 0 auto 40px auto;">
+      <h3 style="color: var(--accent-burgundy); margin-bottom: 8px; font-style: italic; text-align: center; font-size: 26px;">Distributor Application Form</h3>
+      <p style="text-align: center; color: var(--text-muted); margin-bottom: 20px; font-size: 14px;">Fill out your details and our team will reach out within 24 hours.</p>
+
+      <form onsubmit="event.preventDefault(); alert('Thank you for applying! Our team will contact you shortly.');">
+        <label style="font-weight:bold; display:block; margin-bottom:5px;">Business / Owner Name</label>
+        <input type="text" required placeholder="Colette Tatou" style="width:100%; padding:10px; margin-bottom:12px; border:1px solid var(--border-subtle); border-radius:8px; font-family:'Quicksand';">
+
+        <label style="font-weight:bold; display:block; margin-bottom:5px;">City &amp; Province</label>
+        <input type="text" required placeholder="e.g. Surabaya, East Java" style="width:100%; padding:10px; margin-bottom:12px; border:1px solid var(--border-subtle); border-radius:8px; font-family:'Quicksand';">
+
+        <label style="font-weight:bold; display:block; margin-bottom:5px;">Email / WhatsApp Number</label>
+        <input type="text" required placeholder="colette@bistro.com or 08123456789" style="width:100%; padding:10px; margin-bottom:12px; border:1px solid var(--border-subtle); border-radius:8px; font-family:'Quicksand';">
+
+        <label style="font-weight:bold; display:block; margin-bottom:5px;">Estimated Initial Order Quantity</label>
+        <select style="width:100%; padding:10px; margin-bottom:20px; border:1px solid var(--border-subtle); border-radius:8px; background:#fff; font-family:'Quicksand';">
+          <option>50 - 100 Units (Starter Partner)</option>
+          <option>100 - 300 Units (Regional Distributor)</option>
+          <option>300+ Units (Exclusive Provincial Hub)</option>
+        </select>
+
+        <button type="submit" class="tombol" style="width: 100%; text-align: center;">Submit Partnership Request</button>
+      </form>
+    </div>
+
+  </main>
+
+  <footer><p>&copy; 2026 Gusteau’s Atelier. Inspired by Ratatouille.</p></footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

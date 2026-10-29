@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gusteau’s Atelier — Product Detail</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="promo-bar">Free shipping on orders over Rp200.000</div>
+
+  <header>
+    <div class="header-container">
+      <h1 class="logo" onclick="window.location.href='index.html'">Gusteau’s Atelier</h1>
+      <nav>
+        <a href="index.html" class="nav-link">Home</a>
+        
+        <!-- DROPDOWN SHOP CATALOG -->
+        <div class="dropdown">
+          <a href="shop.html" class="nav-link">Shop Catalog ▾</a>
+          <div class="dropdown-content">
+            <a href="shop.html#preparation">Preparation Tools</a>
+            <a href="shop.html#baking">Baking &amp; Pastry</a>
+            <a href="shop.html#dining">Dining &amp; Cookware</a>
+          </div>
+        </div>
+
+        <a href="news.html" class="nav-link">News &amp; Articles</a>
+
+        <!-- DROPDOWN DISTRIBUTORS -->
+        <div class="dropdown">
+          <a href="distributor.html" class="nav-link">Distributors ▾</a>
+          <div class="dropdown-content">
+            <a href="distributor.html#hubs">Regional Hubs</a>
+            <a href="distributor.html#partner-form">Application Form</a>
+          </div>
+        </div>
+
+        <!-- DROPDOWN OUR STORY -->
+        <div class="dropdown">
+          <a href="about.html" class="nav-link">Our Story ▾</a>
+          <div class="dropdown-content">
+            <a href="about.html#story">About Us</a>
+            <a href="about.html#contact">Contact Us</a>
+          </div>
+        </div>
+      </nav>
+      <div><a class="tombol tombol-cart" href="cart.html">🛒 Cart (<span id="cart-count">0</span>)</a></div>
+    </div>
+  </header>
+
+  <main class="main-container">
+    <div style="margin-bottom: 20px;">
+      <a href="shop.html" style="color: var(--accent-burgundy); text-decoration: none; font-weight: bold;">← Back to Catalog</a>
+    </div>
+
+    <div class="kotak" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;">
+      <div>
+        <div id="detail-img-box" class="img-placeholder p1" style="height: 340px;"></div>
+      </div>
+
+      <div>
+        <span id="detail-category" class="kategori-label">Preparation Tools</span>
+        <h2 id="detail-title" style="color: var(--accent-burgundy); font-size: 32px; margin: 8px 0; font-style: italic;">Remy's Wooden Spatula</h2>
+        <p id="detail-price" style="font-size: 24px; font-weight: bold; color: var(--olive-green); margin-bottom: 15px;">Rp45.000</p>
+        
+        <p id="detail-desc" style="color: var(--text-dark); margin-bottom: 20px; font-size: 15px;">
+          Hand-carved premium mahogany wooden spatula featuring an engraved silhouette of Remy. Smooth texture, food-grade finish, perfect for sautéing ratatouille without scratching your pans.
+        </p>
+
+        <div style="margin-bottom: 15px;">
+          <label style="font-weight: bold; display: block; margin-bottom: 5px;">Select Variant / Edition:</label>
+          <select id="product-variant" style="width: 100%; padding: 10px; border: 1px solid var(--border-subtle); border-radius: 8px; background: #fff; font-family: 'Quicksand';">
+            <option>Classic Mahogany (Standard)</option>
+            <option>Dark Walnut Edition</option>
+            <option>Light Beechwood Edition</option>
+          </select>
+        </div>
+
+        <div style="margin-bottom: 25px;">
+          <label style="font-weight: bold; display: block; margin-bottom: 5px;">Quantity:</label>
+          <input type="number" id="product-qty" value="1" min="1" max="10" style="width: 100%; padding: 10px; border: 1px solid var(--border-subtle); border-radius: 8px; font-family: 'Quicksand';">
+        </div>
+
+        <button id="add-to-cart-btn" class="tombol" style="width: 100%; text-align: center; padding: 14px; font-size: 16px;">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Review Produk -->
+    <div class="kotak">
+      <h3 style="color: var(--accent-burgundy); margin-bottom: 15px; font-style: italic;">Customer Product Reviews</h3>
+      <div style="display: flex; flex-direction: column; gap: 15px;">
+        <div style="border-bottom: 1px dashed var(--border-subtle); padding-bottom: 12px;">
+          <div style="color: var(--accent-mustard); font-size: 14px;">★★★★★</div>
+          <strong>Colette S.</strong> <small style="color: var(--text-muted);">- October 24, 2026</small>
+          <p style="font-size: 14px; margin-top: 4px;">Very smooth wood and looks adorable in my kitchen utensil holder!</p>
+        </div>
+        <div>
+          <div style="color: var(--accent-mustard); font-size: 14px;">★★★★★</div>
+          <strong>Linguini</strong> <small style="color: var(--text-muted);">- October 22, 2026</small>
+          <p style="font-size: 14px; margin-top: 4px;">Helps me stir soups just like Chef Remy taught me. Excellent quality.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer><p>&copy; 2026 Gusteau’s Atelier.</p></footer>
+  <script src="js/main.js"></script>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get('id') || 'spatula';
+
+    const productsData = {
+      spatula: { cat: "Preparation Tools", title: "Remy's Wooden Spatula", price: 45000, cls: "p1", desc: "Hand-carved premium mahogany wooden spatula featuring an engraved silhouette of Remy." },
+      timer: { cat: "Preparation Tools", title: "Precision Kitchen Timer", price: 75000, cls: "p2", desc: "Vintage mechanical kitchen timer to ensure your simmer sauces never overcook." },
+      cutting: { cat: "Preparation Tools", title: "Ratatouille Cutting Board", price: 120000, cls: "p3", desc: "Solid teak wood cutting board with deep juice grooves and custom Parisian branding." },
+      whisk: { cat: "Preparation Tools", title: "Little Chef Whisk & Spoon", price: 55000, cls: "p4", desc: "Compact stainless steel mini whisk and tasting spoon set." },
+      mould: { cat: "Baking & Pastry", title: "Cheese Silicone Mold", price: 65000, cls: "p5", desc: "Food-grade silicone mold for shaping cute cheese-wheel mini cakes and mousses." },
+      bowl: { cat: "Baking & Pastry", title: "Mixing Bowl", price: 150000, cls: "p6", desc: "A mixing bowls in smooth French bistro feels." },
+      apron: { cat: "Baking & Pastry", title: "Chef Gingham Apron", price: 95000, cls: "p7", desc: "Classic red and white gingham cotton apron with front pockets." },
+      pin: { cat: "Baking & Pastry", title: "Parisian Rolling Pin", price: 135000, cls: "p8", desc: "French-style tapered wooden rolling pin for effortless dough spreading." },
+      plate: { cat: "Dining & Serve-ware", title: "Bistro Ceramic Plate", price: 85000, cls: "p9", desc: "Hand-glazed ceramic plate designed specifically for layered Confit Byaldi presentation." },
+      glass: { cat: "Dining & Serve-ware", title: "Minimalist Glass Measuring Jug", price: 110000, cls: "p10", desc: "Heat-resistant borosilicate glass measuring jug with clear ml/oz markers." },
+      pan: { cat: "Cookware", title: "Carbon Steel Bistro Pan", price: 250000, cls: "p11", desc: "Professional carbon steel frying pan for perfect heat distribution and sear." },
+      pot: { cat: "Cookware", title: "French Enamel Stock Pot", price: 320000, cls: "p12", desc: "Heavy-duty enamel-coated cast iron stock pot for slow-simmered French stews." },
+      set: { cat: "Dining & Serve-ware", title: "Vintage Gold Cutlery Set", price: 180000, cls: "p13", desc: "Matte gold stainless steel fork, knife, and spoon set for exquisite dining." }
+    };
+
+    if(productsData[productId]) {
+      const p = productsData[productId];
+      document.getElementById('detail-category').textContent = p.cat;
+      document.getElementById('detail-title').textContent = p.title;
+      document.getElementById('detail-price').textContent = 'Rp' + p.price.toLocaleString('id-ID');
+      document.getElementById('detail-desc').textContent = p.desc;
+      document.getElementById('detail-img-box').className = 'img-placeholder ' + p.cls;
+      
+      const btn = document.getElementById('add-to-cart-btn');
+      btn.onclick = function() {
+        addToCartWithOptions(p.title, p.price);
+      };
+    }
+  </script>
+</body>
+</html>
