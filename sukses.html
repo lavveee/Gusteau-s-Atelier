@@ -15,7 +15,17 @@
       <h1 class="logo" onclick="window.location.href='index.html'">Gusteau’s Atelier</h1>
       <nav>
         <a href="index.html" class="nav-link">Home</a>
-        <a href="shop.html" class="nav-link">Shop Catalog</a>
+        
+        <!-- DROPDOWN SHOP CATALOG YANG LENGKAP -->
+        <div class="dropdown" style="position: relative; display: inline-block;">
+          <a href="shop.html" class="nav-link" style="text-decoration: none;">Shop Catalog ▾</a>
+          <div class="dropdown-content" style="display: none; position: absolute; background-color: #faf7f2; min-width: 180px; box-shadow: 0 8px 16px rgba(0,0,0,0.1); z-index: 10; border-radius: 8px; padding: 10px 0; border: 1px solid #d1c7bd;">
+            <a href="shop.html?cat=cookware" style="color: #2c221e; padding: 8px 16px; text-decoration: none; display: block; font-size: 14px;">French Cookware</a>
+            <a href="shop.html?cat=bakeware" style="color: #2c221e; padding: 8px 16px; text-decoration: none; display: block; font-size: 14px;">Bakeware & Pastry</a>
+            <a href="shop.html?cat=cutlery" style="color: #2c221e; padding: 8px 16px; text-decoration: none; display: block; font-size: 14px;">Chef's Utensils</a>
+          </div>
+        </div>
+
         <a href="news.html" class="nav-link">News &amp; Articles</a>
         <a href="distributor.html" class="nav-link">Distributors</a>
         <a href="about.html" class="nav-link">Our Story</a>
