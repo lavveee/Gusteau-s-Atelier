@@ -450,3 +450,143 @@ footer {
   border-radius: 20px !important;
   box-shadow: 0 10px 25px rgba(44, 34, 30, 0.15) !important;
 }
+/* Styling Khusus Halaman Sukses & Tracker */
+.success-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.receipt-box {
+  background: #ffffff;
+  border: 2px dashed var(--border-subtle);
+  border-radius: 16px;
+  padding: 25px;
+  font-family: 'Courier New', Courier, monospace;
+  box-shadow: 0 8px 20px rgba(44, 34, 30, 0.05);
+}
+
+.receipt-header {
+  text-align: center;
+  border-bottom: 2px dashed var(--text-dark);
+  padding-bottom: 12px;
+  margin-bottom: 15px;
+}
+
+.receipt-items {
+  font-size: 13px;
+  margin-bottom: 12px;
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 12px;
+}
+
+.receipt-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+
+.receipt-total {
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  border-top: 2px dashed var(--text-dark);
+  padding-top: 10px;
+}
+
+.tracker-box {
+  background: var(--bg-card);
+  border: 2px solid var(--border-subtle);
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 6px 18px rgba(44, 34, 30, 0.04);
+}
+
+.tracker-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.step-item {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.step-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--border-subtle);
+  color: var(--text-muted);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+.step-item.active .step-icon {
+  background: var(--olive-green);
+  color: #ffffff;
+}
+
+.step-content h4 {
+  font-size: 15px;
+  color: var(--text-dark);
+  margin-bottom: 2px;
+}
+
+.step-content p {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   RESPONSIVE FIXES FOR MOBILE & IPAD (HP & TABLET)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 15px;
+  }
+  
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .nav-link {
+    font-size: 12px;
+    padding: 4px 10px;
+  }
+
+  .grid-cards {
+    grid-template-columns: 1fr !important;
+    gap: 15px;
+  }
+
+  .success-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+
+  .judul-section {
+    font-size: 24px !important;
+  }
+
+  .banner-cook-together, .partner-banner-bg {
+    padding: 30px 15px !important;
+    min-height: 280px !important;
+  }
+}
