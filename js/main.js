@@ -72,35 +72,9 @@ function updateCartDisplay() {
 
   if (cart.length === 0) {
     container.innerHTML = '<p style="text-align: center; color: #666; font-style: italic; padding: 20px;">Your cart is currently empty.</p>';
-    if (summaryBox) summaryBox.style.display = 'none'; // Kotak total otomatis disembunyikan kalau kosong!
+    if (summaryBox) summaryBox.style.display = 'none';
     return;
   }
-
-  let html = '';
-  cart.forEach((item, index) => {
-    let subtotal = item.price * item.qty;
-    html += `
-      <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px dashed #d1c7bd; padding: 12px 0;">
-        <div>
-          <strong>${item.name}</strong><br>
-          <small style="color: #666;">Variant: ${item.variant} | Price: Rp${item.price.toLocaleString('id-ID')}</small>
-        </div>
-        <div style="display: flex; align-items: center; gap: 15px;">
-          <span>Qty: ${item.qty}</span>
-          <span style="font-weight: bold; color: #6b705c;">Rp${subtotal.toLocaleString('id-ID')}</span>
-          <button onclick="removeItem(${index})" style="background:none; border:none; color:#9e2a2b; cursor:pointer; font-weight:bold;">✕</button>
-        </div>
-      </div>
-    `;
-  });
-
-  container.innerHTML = html;
-  if (summaryBox) {
-    summaryBox.style.display = 'block'; // Kotak total dimunculkan kalau ada isinya!
-    const totalPriceEl = document.getElementById('cart-grand-total');
-    if (totalPriceEl) totalPriceEl.textContent = 'Rp' + grandTotal.toLocaleString('id-ID');
-  }
-}
 
   let html = '';
   cart.forEach((item, index) => {
