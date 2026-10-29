@@ -27,7 +27,7 @@
   <main class="main-container">
     <div style="text-align: center; margin-bottom: 30px;">
       <h2 class="judul-section" style="margin-bottom: 8px;">✓ Order Successfully Placed!</h2>
-      <p style="color: var(--text-muted); font-size: 15px;">Your digital receipt and live shipping progress tracker are shown below.</p>
+      <p style="color: #666; font-size: 15px;">Your digital receipt and live shipping progress tracker are shown below.</p>
     </div>
 
     <div class="success-grid">
@@ -35,17 +35,17 @@
       <div class="receipt-box">
         <div class="receipt-header">
           <h3>Gusteau’s Atelier</h3>
-          <p style="font-size: 12px; color: var(--text-muted);">Parisian Kitchenware Boutique</p>
-          <small style="color: var(--text-muted);">Dispatched from: Bandung Hub</small>
+          <p style="font-size: 12px; color: #666;">Parisian Kitchenware Boutique</p>
+          <small style="color: #666;">Dispatched from: Bandung Hub</small>
         </div>
 
         <div id="receipt-items-list" class="receipt-items">
-          <!-- Item order akan dirender otomatis dari localStorage oleh main.js -->
+          <!-- Item order dirender dari localStorage oleh main.js -->
         </div>
 
         <div class="receipt-row">
           <span>Voucher Used:</span>
-          <span id="receipt-voucher-used" style="font-weight: bold; color: var(--accent-burgundy);">-</span>
+          <span id="receipt-voucher-used" style="font-weight: bold; color: #78290f;">-</span>
         </div>
 
         <div class="receipt-total">
@@ -56,9 +56,9 @@
 
       <!-- TRACKER PENGIRIMAN LIVE -->
       <div class="tracker-box">
-        <h3 style="color: var(--accent-burgundy); font-style: italic; margin-bottom: 12px; font-size: 22px;">Live Shipping Tracker</h3>
-        <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 4px;">Destination Region: <strong id="tracker-region-text" style="color: var(--text-dark);">Outer Islands</strong></p>
-        <p id="tracker-estimate-text" style="font-size: 13px; font-weight: bold; color: var(--olive-green); margin-bottom: 20px;">Estimated Delivery: 3-5 Days</p>
+        <h3 style="color: #78290f; font-style: italic; margin-bottom: 12px; font-size: 22px;">Live Shipping Tracker</h3>
+        <p style="font-size: 13px; color: #666; margin-bottom: 4px;">Destination Region: <strong id="tracker-region-text" style="color: #2c221e;">Outer Islands</strong></p>
+        <p id="tracker-estimate-text" style="font-size: 13px; font-weight: bold; color: #6b705c; margin-bottom: 20px;">Estimated Delivery: 3-5 Days</p>
 
         <div class="tracker-steps">
           <div class="step-item active">
@@ -96,9 +96,8 @@
       </div>
     </div>
 
-    <!-- TOMBOL KEMBALI KE HOMEPAGE -->
     <div style="text-align: center; margin-top: 40px; margin-bottom: 20px;">
-      <a href="index.html" class="tombol" style="padding: 14px 35px; font-size: 15px;">Return to Homepage</a>
+      <a href="index.html" class="tombol" style="padding: 14px 35px; font-size: 15px; background-color: #78290f; color: #fff; text-decoration: none; border-radius: 8px; display: inline-block;">Return to Homepage</a>
     </div>
   </main>
 
